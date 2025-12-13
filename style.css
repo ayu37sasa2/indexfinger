@@ -182,11 +182,13 @@ header {
 }
 
 .overlay>div {
-   position: absolute;
+    position: absolute;
     top: 150px;
     left: 50%;
-    transform: translate(-50%, -50%); /* 真ん中に配置 */
-    text-align: center; /* アイコン・リンクを中央揃え */
+    transform: translate(-50%, -50%);
+    /* 真ん中に配置 */
+    text-align: center;
+    /* アイコン・リンクを中央揃え */
 }
 
 .overlay a i {
@@ -212,7 +214,7 @@ header {
 }
 
 .overlay a {
-    
+
     text-decoration: none;
     color: black;
     font-size: 20px;
@@ -729,12 +731,50 @@ pcサイズ
 }
 
 @media (max-width:800px) {
+    h3 {
+        font-size: 28px;
+    }
+
+    .catch {
+        font-size: 22px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    /* --------------------------------------
+main
+-------------------------------------- */
     .pc-menu {
         display: none;
     }
 
     .sp-menu {
         display: block;
+    }
+
+    /* --------------company---------------- */
+    .company {
+        /* videoと同じ高さ */
+        height: 500px;
+    }
+
+    #bg-video {
+        height: 500px;
+    }
+
+    .company h2 {
+        font-size: 38px;
+        /* 単語単位で折り返す */
+        word-break: break-word;
+        /* 長い単語でも折り返す */
+        overflow-wrap: break-word;
+        white-space: normal;
+    }
+
+    .company p {
+        font-size: 20px;
     }
 
     /* --------------service---------------- */
