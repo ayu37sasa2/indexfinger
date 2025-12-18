@@ -1213,7 +1213,7 @@ about.index
 .ab-container > div{
     opacity: 0;
     transform: translateY(100px);
-    transition: all 1s ease;
+    transition: all 2s ease;
 }
 .ab-container > div.show{
     opacity: 1;
