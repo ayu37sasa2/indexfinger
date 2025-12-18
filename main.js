@@ -53,7 +53,7 @@
 
         // .show を付けたい要素
         const targets = document.querySelectorAll(
-            ".company h2, .company p, .explanation, .sr-rt, .sr-lt, .recruit-left, .job-detail dl,  .common-head h5,  .common-head h6"
+            ".company h2, .company p, .explanation, .sr-rt, .sr-lt, .recruit-left, .job-detail dl,  .common-head h5,  .common-head h6, .message-img, .message-text, .ab-container > div"
         );
 
         const options = {

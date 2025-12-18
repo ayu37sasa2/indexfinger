@@ -1104,6 +1104,14 @@ recruit.index
 
 .message-img {
     width: 50%;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 2s ease;
+}
+
+.message-img.show {
+    opacity: 1;
+    transform: none;
 }
 
 .message-img img {
@@ -1114,6 +1122,14 @@ recruit.index
 
 .message-text {
     width: 50%;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 2s ease;
+}
+
+.message-text.show {
+    opacity: 1;
+    transform: none;
 }
 
 .message-text p {
@@ -1155,10 +1171,12 @@ recruit.index
 
     .message-img {
         width: 100%;
+        transform: none;
     }
 
     .message-text {
         width: 100%;
+        transform: none;
     }
 
     /* --------------guidelines---------------- */
@@ -1192,7 +1210,15 @@ about.index
     border-bottom: 5px solid #FF6928;
     margin-bottom: 40px;
 }
-
+.ab-container > div{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease;
+}
+.ab-container > div.show{
+    opacity: 1;
+    transform: none;
+}
 .ab-img {
     max-width: 400px;
     max-height: 400px;
@@ -1242,6 +1268,10 @@ about.index
         margin-bottom: 20px;
     }
 
+    .ab-container > div{
+    transform: none;
+}
+
     .ab-img {
         max-width: 300px;
         max-height: 300px;
@@ -1254,18 +1284,7 @@ about.index
 
     /* --------------INFORMATION---------------- */
     .information {
-        width: 100%;
-        margin: 100px auto 30px;
-        padding: 100px 0;
-        background-color: #FFF1E8;
-    }
-
-    .information h4 {
-        text-align: center;
-    }
-
-    .information h3 {
-        text-align: center;
-        padding-bottom: 30px;
+        margin: 70px auto 0;
+        padding: 70px 0;
     }
 }
