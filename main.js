@@ -53,13 +53,13 @@
 
         // .show を付けたい要素
         const targets = document.querySelectorAll(
-            ".company h2, .company p, .explanation, .sr-rt, .sr-lt, .recruit-left, .job-detail dl"
+            ".company h2, .company p, .explanation, .sr-rt, .sr-lt, .recruit-left, .job-detail dl,  .common-head h5,  .common-head h6"
         );
 
         const options = {
             root: null, // ビューポート
             rootMargin: "0px",
-            threshold: 0.5 // 50%見えたら発火
+            threshold: 0.3 // 30%見えたら発火
         };
 
         const observer = new IntersectionObserver((entries, observer) => {
