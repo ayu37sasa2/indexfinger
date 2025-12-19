@@ -4,6 +4,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 body {
@@ -309,6 +312,8 @@ main
     padding: 10px 0;
     letter-spacing: 2px;
     text-shadow: 1px 2px 0.8px black;
+    word-break: keep-all;
+    overflow-wrap: break-word;
     transform: translateX(-200px);
     opacity: 0;
     transition: all 1s ease;
