@@ -59,7 +59,7 @@
         const options = {
             root: null, // ビューポート
             rootMargin: "0px",
-            threshold: 0.3 // 30%見えたら発火
+            threshold: 0.2 // 20%見えたら発火
         };
 
         const observer = new IntersectionObserver((entries, observer) => {

@@ -6,6 +6,12 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans", Meiryo, sans-serif;
+}
+
+
 h4 {
     font-size: 16px;
     letter-spacing: 2px;
@@ -1210,15 +1216,18 @@ about.index
     border-bottom: 5px solid #FF6928;
     margin-bottom: 40px;
 }
-.ab-container > div{
+
+.ab-container>div {
     opacity: 0;
     transform: translateY(100px);
     transition: all 2s ease;
 }
-.ab-container > div.show{
+
+.ab-container>div.show {
     opacity: 1;
     transform: none;
 }
+
 .ab-img {
     max-width: 400px;
     max-height: 400px;
@@ -1268,9 +1277,9 @@ about.index
         margin-bottom: 20px;
     }
 
-    .ab-container > div{
-    transform: none;
-}
+    .ab-container>div {
+        transform: none;
+    }
 
     .ab-img {
         max-width: 300px;
