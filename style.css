@@ -1274,7 +1274,11 @@ about.index
     padding-bottom: 30px;
 }
 
-/* --------------google map---------------- */
+.job-detail a {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 
 @media (max-width:800px) {
