@@ -5,7 +5,8 @@
     padding: 0;
     box-sizing: border-box;
 
-    word-break: break-word;
+    word-break: keep-all;
+    line-break: normal;
     overflow-wrap: break-word;
 }
 
@@ -316,11 +317,6 @@ main
     padding: 10px 0;
     letter-spacing: 2px;
     text-shadow: 1px 2px 0.8px black;
-
-    word-break: keep-all;
-    /* 日本語を変に分断しない */
-    line-break: strict;
-    /* 日本語の禁則処理 */
 
     transform: translateX(-200px);
     opacity: 0;
