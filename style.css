@@ -14,6 +14,10 @@ body {
         "Hiragino Sans", Meiryo, sans-serif;
 }
 
+/* 改行br */
+.sp-only {
+    display: none;
+}
 
 h4 {
     font-size: 16px;
@@ -312,8 +316,12 @@ main
     padding: 10px 0;
     letter-spacing: 2px;
     text-shadow: 1px 2px 0.8px black;
+
     word-break: keep-all;
-    overflow-wrap: break-word;
+    /* 日本語を変に分断しない */
+    line-break: strict;
+    /* 日本語の禁則処理 */
+
     transform: translateX(-200px);
     opacity: 0;
     transition: all 1s ease;
@@ -922,8 +930,12 @@ main
     }
 }
 
-
-
+/* 改行を有効化  */
+@media (max-width: 600px) {
+    .sp-only {
+        display: block;
+    }
+}
 
 /* -----------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------
