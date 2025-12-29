@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>会社概要 / index finger</title>
+    <title>お問い合わせ / index finger</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="image/index_logo.webp">
     <!-- マテリアルアイコン -->
@@ -67,6 +67,7 @@
                     <li><a href="about.html">ABOUT</a></li>
                     <li><a href="recruit.html">RECRUIT</a></li>
                     <li><a href="form.html">CONTACT</a></li>
+
                 </ul>
             </div>
         </div>
@@ -76,71 +77,54 @@
         <div class="common-head">
             <img src="image/office.webp" alt="">
             <div>
-                <h5>ABOUT</h5>
-                <h6>会社概要</h6>
+                <h5>CONTACT</h5>
+                <h6>お問い合わせ</h6>
             </div>
         </div>
-        <section class="ab-container">
-            <h4>ABOUT</h4>
-            <h3>index fingerについて</h3>
-            <div>
-                <div class="ab-img">
-                    <img src="image/index_logo.webp" alt="">
+        <section class="contact-page">
+            <form action="https://formspree.io/f/xjgvgpvv" method="POST">
+                <div class="ctpg-container">
+                    <div class="form-group">
+                        <label class="form-label">お問い合わせ内容</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="category">
+                                相談希望（法人のお客様）
+                            </label>
+                            <label>
+                                <input type="radio" name="category">
+                                採用応募
+                            </label>
+                            <label>
+                                <input type="radio" name="category">
+                                その他
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">お名前 <span class="required">*</span></label>
+                        <input type="text" class="input" placeholder="田中 太郎" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">メールアドレス <span class="required">*</span></label>
+                        <input type="email" class="input" placeholder="email@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">電話番号 <span class="required">*</span></label>
+                        <input type="tel" class="input" placeholder="012-3456-7890" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">お問い合わせ内容</label>
+                        <textarea class="textarea" placeholder="ご自由にご記入ください"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">送信する</button>
                 </div>
-                <div class="ab-text">
-                    <!-- no-break  会社名を崩さないため -->
-                    <p><span class="no-break">私たちindex
-                            fingerは、</span>十人十色の個性を生かし、誰もが輝ける場所を追究しながらクライアント様の期待に応え続ける唯一無二の会社を目指します。
-                    </p>
-                </div>
-            </div>
+            </form>
         </section>
-
-        <section class="information">
-            <h4>INFORMATION</h4>
-            <h3>会社概要</h3>
-            <section class="job-detail">
-                <dl>
-                    <div class="row">
-                        <dt>会社名</dt>
-                        <dd>株式会社index finger</dd>
-                    </div>
-
-                    <div class="row">
-                        <dt>代表取締役</dt>
-                        <dd>微々 公大 </dd>
-                    </div>
-
-                    <div class="row">
-                        <dt>所在地</dt>
-                        <dd>大阪府大阪市中央区本町111丁目<br class="sp-only">10-33本町1002号室</dd>
-                    </div>
-
-                    <div class="row">
-                        <dt>電話番号</dt>
-                        <dd>070-1212-3434</dd>
-                    </div>
-
-                    <div class="row">
-                        <dt>設立</dt>
-                        <dd>2019年8月29日 </dd>
-                    </div>
-
-                    <div class="row">
-                        <dt>メールアドレス</dt>
-                        <dd><a href="mailto:in.fin-official@infin.o">in.fin-official@infin.o</a></dd>
-                    </div>
-                </dl>
-            </section>
-        </section>
-
-        <div class="map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.0625528817163!2d135.4946138264328!3d34.70360217291868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e68d95e3a70b%3A0x1baec822e859c84a!2z5aSn6Ziq6aeF!5e0!3m2!1sja!2sjp!4v1766062589400!5m2!1sja!2sjp"
-                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
 
         <section class="contact">
             <h4>CONTACT</h4>

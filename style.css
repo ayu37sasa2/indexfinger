@@ -66,6 +66,90 @@ h3 {
     color: #FF6928;
 }
 
+/* --------------contact---------------- */
+.contact {
+    width: 100%;
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    /* 背景画像 */
+    background-image: url("image/contact-bg.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+.contact::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    /* 黒フィルター */
+    background-color: rgba(56, 56, 56, 0.6);
+    z-index: 1;
+}
+
+/* 中身をフィルターより上に */
+.contact>* {
+    position: relative;
+    z-index: 2;
+}
+
+.contact h4 {
+    color: white;
+    margin-bottom: 6px;
+
+}
+
+.contact h3 {
+    color: white;
+    margin-bottom: 12px;
+
+}
+
+.ct-cn-text {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.ct-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px 0;
+    background-color: white;
+
+    display: flex;
+}
+
+.ct-left {
+    width: 60%;
+}
+
+.cl-text {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.cl-phone {
+    font-size: 30px;
+    color: #FF6928;
+    font-weight: 600;
+}
+
+.fa-phone {
+    padding-right: 8px;
+}
+
+.ct-right {
+    width: 40%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+
 
 /* --------------------------------------
 header
@@ -197,7 +281,7 @@ header {
 
 .overlay>div {
     position: absolute;
-    top: 150px;
+    top: 200px;
     left: 50%;
     transform: translate(-50%, -50%);
     /* 真ん中に配置 */
@@ -270,6 +354,11 @@ header {
 /* 3番目 */
 .overlay.show li:nth-child(3) {
     transition-delay: .5s;
+}
+
+/* 4番目 */
+.overlay.show li:nth-child(4) {
+    transition-delay: .7s;
 }
 
 
@@ -456,6 +545,11 @@ main
     border: 2px solid #FF6928;
     border-radius: 36px;
     position: relative;
+
+    transition:
+        box-shadow 0.4s ease,
+        border-color 0.4s ease,
+        transform 0.4s ease;
 }
 
 /* 長文の一つ目のreason-chのため */
@@ -464,8 +558,9 @@ main
 }
 
 .reason-container article:hover {
-    transform: scale(1.1);
-    transition: all 1s ease;
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    border-color: #FF6928;
 }
 
 .reason-ch {
@@ -664,6 +759,32 @@ pcサイズ
         width: fit-content;
     }
 
+    /* --------------contact---------------- */
+    .contact {
+        padding: 70px 0;
+    }
+
+    .ct-container {
+        max-width: 100%;
+        margin: 0 20px;
+
+        flex-direction: column;
+    }
+
+    .ct-left {
+        width: 100%;
+    }
+
+    .cl-phone {
+        font-size: 30px;
+        color: #FF6928;
+        font-weight: 600;
+    }
+
+    .ct-right {
+        width: 100%;
+        margin-top: 20px;
+    }
 
     /* --------------about---------------- */
     #about {
@@ -1257,6 +1378,10 @@ about.index
     font-size: 18px;
 }
 
+.no-break {
+    white-space: nowrap;
+}
+
 /* --------------INFORMATION---------------- */
 .information {
     width: 100%;
@@ -1278,8 +1403,6 @@ about.index
     text-decoration: none;
     color: inherit;
 }
-
-
 
 @media (max-width:800px) {
 
@@ -1312,5 +1435,124 @@ about.index
     .information {
         margin: 70px auto 0;
         padding: 70px 0;
+    }
+}
+
+
+/* -----------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+
+form.index
+
+--------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------- */
+/* --------------CONTACT---------------- */
+.contact-page {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.ctpg-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 16px;
+}
+
+.radio-group input {
+    margin-right: 6px;
+}
+
+.required {
+    color: #007BFF;
+}
+
+.input,
+.textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: none;
+    background-color: #FFF5EB;
+    font-size: 16px;
+}
+
+.textarea {
+    min-height: 140px;
+    /* サイズ変更を「上下だけ」にできる指定 */
+    resize: vertical;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+    color: #C98A63;
+}
+
+.submit-btn {
+    margin-top: 12px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #FF6928;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #FFF5EB;
+    color: #FF6928;
+}
+
+@media (max-width:800px) {
+
+    /* --------------CONTACT---------------- */
+    .contact-page {
+        width: 100%;
+        padding: 70px 0;
+    }
+
+    .form-group {
+        max-width: 100%;
+        margin: 0 20px;
+    }
+
+    .radio-group {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        font-size: 16px;
+    }
+
+    .radio-group input {
+        margin-right: 6px;
+    }
+
+    .required {
+        color: #007BFF;
+    }
+
+    .submit-btn {
+        margin: 0 20px;
     }
 }
